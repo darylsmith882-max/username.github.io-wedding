@@ -1,0 +1,890 @@
+```html
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daryl Smith & Elicia Natasha | Wedding Invitation</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royalblue: '#071A52',
+                        blue2: '#0A2463',
+                        gold: '#D4AF37',
+                        lightgold: '#F3E5AB',
+                        offwhite: '#FDFBF7'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #071A52;
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(rgba(7,26,82,.78), rgba(7,26,82,.88)),
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=85');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gold-line {
+            width: 70px;
+            height: 2px;
+            background: #D4AF37;
+            margin: 20px auto;
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212,175,55,.18);
+        }
+    </style>
+</head>
+
+<body class="bg-offwhite text-gray-800 font-sans antialiased">
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero-bg min-h-screen flex items-center justify-center text-center relative">
+
+    <div class="absolute inset-4 md:inset-6 border border-gold/40 pointer-events-none"></div>
+
+    <div class="relative z-10 px-6 text-white fade-in">
+
+        <p class="text-gold tracking-[0.35em] uppercase text-xs md:text-sm mb-6">
+            Wedding Invitation
+        </p>
+
+        <div class="mb-5 text-gold text-3xl">
+            ✦
+        </div>
+
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight">
+            Daryl Smith
+            <span class="block text-gold italic text-4xl md:text-5xl my-2">
+                &
+            </span>
+            Elicia Natasha
+        </h1>
+
+        <div class="gold-line"></div>
+
+        <p class="tracking-[0.25em] text-sm md:text-base mt-6">
+            04 • 06 • 2027
+        </p>
+
+        <p class="mt-3 text-sm text-gray-200">
+            6:30 Petang
+        </p>
+
+        <a href="#countdown"
+           class="inline-block mt-14 text-white hover:text-gold transition animate-bounce">
+            <i class="fas fa-chevron-down text-xl"></i>
+        </a>
+
+    </div>
+</header>
+
+
+<!-- =========================================================
+     COUNTDOWN
+========================================================= -->
+
+<section id="countdown" class="py-20 bg-white">
+
+    <div class="container mx-auto px-6 text-center max-w-5xl">
+
+        <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">
+            Menuju Hari Bahagia
+        </p>
+
+        <h2 class="font-serif text-3xl md:text-4xl text-royalblue">
+            Menghitung Hari
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <div class="flex justify-center gap-4 md:gap-8 mt-12 flex-wrap">
+
+            <div class="text-center">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold flex items-center justify-center bg-lightgold/20 gold-glow">
+                    <span id="days" class="font-serif text-3xl md:text-4xl text-royalblue">00</span>
+                </div>
+                <p class="mt-3 text-xs tracking-widest uppercase text-gray-500">Hari</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold flex items-center justify-center bg-lightgold/20 gold-glow">
+                    <span id="hours" class="font-serif text-3xl md:text-4xl text-royalblue">00</span>
+                </div>
+                <p class="mt-3 text-xs tracking-widest uppercase text-gray-500">Jam</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold flex items-center justify-center bg-lightgold/20 gold-glow">
+                    <span id="minutes" class="font-serif text-3xl md:text-4xl text-royalblue">00</span>
+                </div>
+                <p class="mt-3 text-xs tracking-widest uppercase text-gray-500">Minit</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold flex items-center justify-center bg-lightgold/20 gold-glow">
+                    <span id="seconds" class="font-serif text-3xl md:text-4xl text-royalblue">00</span>
+                </div>
+                <p class="mt-3 text-xs tracking-widest uppercase text-gray-500">Saat</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     INVITATION
+========================================================= -->
+
+<section class="py-24 bg-[#F3E5AB]/25 relative">
+
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+
+        <div class="text-gold text-3xl mb-6">
+            ♡
+        </div>
+
+        <p class="uppercase tracking-[0.25em] text-xs text-gold mb-4">
+            Dengan penuh kesyukuran
+        </p>
+
+        <h2 class="font-serif text-3xl md:text-4xl text-royalblue mb-8">
+            Dengan Sukacitanya Kami Menjemput Anda
+        </h2>
+
+        <p class="leading-relaxed text-gray-700 text-base md:text-lg">
+            Dengan penuh rasa kesyukuran, kami sekeluarga
+            dengan sukacitanya menjemput Dato' / Datin / Tuan /
+            Puan / Encik / Cik ke majlis perkahwinan
+            putera dan puteri kesayangan kami.
+        </p>
+
+        <!-- Nama ibu/bapa boleh dimasukkan kemudian -->
+
+        <div class="my-12">
+
+            <p class="font-serif text-3xl text-royalblue italic">
+                Daryl Smith
+            </p>
+
+            <p class="text-sm text-gray-500 my-3">
+                bersama
+            </p>
+
+            <p class="font-serif text-3xl text-royalblue italic">
+                Elicia Natasha
+            </p>
+
+        </div>
+
+        <p class="leading-relaxed text-gray-700">
+            Kehadiran serta doa restu anda amat kami hargai
+            dan akan menjadi kenangan yang indah buat kami.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     DETAILS
+========================================================= -->
+
+<section class="py-24 bg-white">
+
+    <div class="container mx-auto px-6 max-w-5xl">
+
+        <div class="text-center mb-14">
+
+            <p class="text-gold uppercase tracking-[0.25em] text-xs mb-3">
+                Save The Date
+            </p>
+
+            <h2 class="font-serif text-3xl md:text-4xl text-royalblue">
+                Butiran Majlis
+            </h2>
+
+            <div class="gold-line"></div>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <!-- DETAILS -->
+
+            <div class="bg-offwhite rounded-xl p-8 md:p-10 shadow-xl border-t-4 border-gold">
+
+                <div class="mb-8">
+
+                    <p class="text-gold uppercase tracking-widest text-xs font-semibold mb-2">
+                        Tarikh
+                    </p>
+
+                    <p class="font-serif text-2xl text-royalblue">
+                        Jumaat, 4 Jun 2027
+                    </p>
+
+                </div>
+
+
+                <div class="mb-8">
+
+                    <p class="text-gold uppercase tracking-widest text-xs font-semibold mb-2">
+                        Masa
+                    </p>
+
+                    <p class="font-serif text-2xl text-royalblue">
+                        6:30 Petang
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <p class="text-gold uppercase tracking-widest text-xs font-semibold mb-2">
+                        Lokasi
+                    </p>
+
+                    <p class="font-serif text-2xl text-royalblue mb-2">
+                        Dewan Kampung Sebiris
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Kampung Sebiris,<br>
+                        94500 Lundu,<br>
+                        Sarawak.
+                    </p>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Dewan+Kampung+Sebiris+Lundu+Sarawak"
+                       target="_blank"
+                       rel="noopener"
+                       class="inline-block bg-royalblue hover:bg-gold text-white font-semibold py-3 px-7 rounded-full transition shadow-md">
+
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        Lihat Lokasi
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- TENTATIF -->
+
+            <div class="bg-royalblue text-white rounded-xl p-8 md:p-10 shadow-xl border-t-4 border-gold">
+
+                <h3 class="font-serif text-2xl text-gold mb-8">
+                    Tentatif Majlis
+                </h3>
+
+                <div class="space-y-7">
+
+                    <div class="flex gap-4">
+                        <span class="text-gold font-semibold w-20 flex-shrink-0">
+                            5:00 PM
+                        </span>
+
+                        <span>
+                            Blessing Ceremony di Gereja SIB Kg. Sedaing
+                        </span>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <span class="text-gold font-semibold w-20 flex-shrink-0">
+                            6:30 PM
+                        </span>
+
+                        <span>
+                            Ketibaan Pengantin di Dewan Kg. Sebiris & Acara Bergambar
+                        </span>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <span class="text-gold font-semibold w-20 flex-shrink-0">
+                            7:00 PM
+                        </span>
+
+                        <span>
+                            Bacaan Doa & Jamuan Makan
+                        </span>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <span class="text-gold font-semibold w-20 flex-shrink-0">
+                            8:00 PM
+                        </span>
+
+                        <span>
+                            Acara Memotong Kek
+                        </span>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <span class="text-gold font-semibold w-20 flex-shrink-0">
+                            8:30 PM
+                        </span>
+
+                        <span>
+                            Acara Hiburan & Majlis Bersurai
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="py-24 bg-[#F3E5AB]/20">
+
+    <div class="container mx-auto px-6">
+
+        <div class="text-center mb-14">
+
+            <p class="text-gold uppercase tracking-[0.25em] text-xs mb-3">
+                Our Memories
+            </p>
+
+            <h2 class="font-serif text-3xl md:text-4xl text-royalblue">
+                Galeri Kenangan
+            </h2>
+
+            <div class="gold-line"></div>
+
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+            ```html
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="py-24 bg-[#F3E5AB]/20">
+
+    <div class="container mx-auto px-6">
+
+        <div class="text-center mb-14">
+
+            <p class="text-gold uppercase tracking-[0.25em] text-xs mb-3">
+                Our Memories
+            </p>
+
+            <h2 class="font-serif text-3xl md:text-4xl text-royalblue">
+                Galeri Kenangan
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">
+                Beberapa detik indah yang kami abadikan bersama.
+            </p>
+
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+            <!-- GAMBAR 1 -->
+            <div class="overflow-hidden rounded-xl shadow-xl">
+                <img
+                    src="images/couple-1.jpeg"
+                    alt="Daryl & Elicia - Memories"
+                    class="w-full h-[430px] object-cover hover:scale-105 transition duration-700"
+                >
+            </div>
+
+
+            <!-- GAMBAR 2 -->
+            <div class="overflow-hidden rounded-xl shadow-xl md:-translate-y-6">
+                <img
+                    src="images/couple-2.jpeg"
+                    alt="Daryl & Elicia - Couple"
+                    class="w-full h-[430px] object-cover hover:scale-105 transition duration-700"
+                >
+            </div>
+
+
+            <!-- GAMBAR 3 -->
+            <div class="overflow-hidden rounded-xl shadow-xl">
+                <img
+                    src="images/couple-3.jpeg"
+                    alt="Daryl & Elicia - Wedding"
+                    class="w-full h-[430px] object-cover hover:scale-105 transition duration-700"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     RSVP
+========================================================= -->
+
+<section class="py-24 bg-white">
+
+    <div class="container mx-auto px-6 max-w-3xl">
+
+        <div class="bg-offwhite rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100">
+
+            <div class="text-center mb-10">
+
+                <p class="text-gold uppercase tracking-[0.25em] text-xs mb-3">
+                    RSVP
+                </p>
+
+                <h2 class="font-serif text-3xl md:text-4xl text-royalblue">
+                    Pengesahan Kehadiran
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p class="text-gray-600 mt-4">
+                    Sila sahkan kehadiran anda sebelum
+                    <strong>4 Mei 2027</strong>.
+                </p>
+
+            </div>
+
+
+            <form id="rsvpForm" class="space-y-6">
+
+                <div>
+
+                    <label class="block text-sm font-semibold text-royalblue mb-2">
+                        Nama Penuh
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+
+                </div>
+
+
+                <div>
+
+                    <label class="block text-sm font-semibold text-royalblue mb-2">
+                        No. Telefon
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+
+                </div>
+
+
+                <div>
+
+                    <label class="block text-sm font-semibold text-royalblue mb-2">
+                        Kehadiran
+                    </label>
+
+                    <select
+                        id="attendance"
+                        required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+
+                        <option value="" disabled selected>
+                            Sila Pilih
+                        </option>
+
+                        <option value="Hadir">
+                            Ya, saya akan hadir
+                        </option>
+
+                        <option value="Tidak Hadir">
+                            Maaf, saya tidak dapat hadir
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div id="paxContainer" class="hidden">
+
+                    <label class="block text-sm font-semibold text-royalblue mb-2">
+                        Jumlah Kehadiran
+                    </label>
+
+                    <select
+                        id="pax"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300">
+
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                        <option value="4">4 Orang</option>
+                        <option value="5">5 Orang</option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label class="block text-sm font-semibold text-royalblue mb-2">
+                        Ucapan Kepada Pasangan
+                    </label>
+
+                    <textarea
+                        id="wishes"
+                        rows="4"
+                        placeholder="Tuliskan ucapan dan doa anda..."
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="w-full bg-royalblue hover:bg-gold text-white font-semibold py-4 rounded-full transition shadow-lg">
+
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    Hantar RSVP
+
+                </button>
+
+            </form>
+
+            <p class="text-xs text-gray-400 text-center mt-5">
+                RSVP akan dihantar melalui WhatsApp.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-royalblue text-center py-20">
+
+    <div class="container mx-auto px-6">
+
+        <div class="text-gold text-2xl mb-5">
+            ✦
+        </div>
+
+        <h2 class="font-serif text-4xl text-white">
+            Daryl
+            <span class="text-gold">&</span>
+            Elicia
+        </h2>
+
+        <p class="text-lightgold tracking-[0.3em] text-xs mt-4">
+            04 • 06 • 2027
+        </p>
+
+        <div class="gold-line"></div>
+
+        <p class="text-gray-300 text-sm max-w-xl mx-auto leading-relaxed">
+            “Kehadiran dan doa restu anda adalah hadiah terindah buat kami.
+            Semoga ikatan yang terbina ini sentiasa dilimpahi kasih sayang,
+            kebahagiaan dan keberkatan.”
+        </p>
+
+        <p class="text-gray-500 text-xs mt-10">
+            With love, Daryl & Elicia
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /*
+       ============================================
+       RSVP WHATSAPP
+       ============================================
+
+       BILA DAH ADA NOMBOR WHATSAPP,
+       TUKAR NOMBOR DI BAWAH.
+
+       Contoh:
+       const whatsappNumber = "60123456789";
+    */
+
+    const whatsappNumber = "60136241142";
+
+
+    /*
+       ============================================
+       COUNTDOWN
+       ============================================
+    */
+
+    const weddingDate = new Date("June 4, 2027 18:30:00").getTime();
+
+    const countdown = setInterval(function () {
+
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance <= 0) {
+
+            clearInterval(countdown);
+
+            document.getElementById("days").innerText = "00";
+            document.getElementById("hours").innerText = "00";
+            document.getElementById("minutes").innerText = "00";
+            document.getElementById("seconds").innerText = "00";
+
+            return;
+        }
+
+        const days = Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
+
+        document.getElementById("days").innerText =
+            String(days).padStart(2, "0");
+
+        document.getElementById("hours").innerText =
+            String(hours).padStart(2, "0");
+
+        document.getElementById("minutes").innerText =
+            String(minutes).padStart(2, "0");
+
+        document.getElementById("seconds").innerText =
+            String(seconds).padStart(2, "0");
+
+    }, 1000);
+
+
+    /*
+       ============================================
+       SHOW / HIDE JUMLAH KEHADIRAN
+       ============================================
+    */
+
+    const attendance =
+        document.getElementById("attendance");
+
+    const paxContainer =
+        document.getElementById("paxContainer");
+
+    attendance.addEventListener("change", function () {
+
+        if (this.value === "Hadir") {
+
+            paxContainer.classList.remove("hidden");
+
+        } else {
+
+            paxContainer.classList.add("hidden");
+
+        }
+
+    });
+
+
+    /*
+       ============================================
+       RSVP → WHATSAPP
+       ============================================
+    */
+
+    document
+        .getElementById("rsvpForm")
+        .addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            if (whatsappNumber === "601XXXXXXXXX") {
+
+                alert(
+                    "Sila masukkan nombor WhatsApp pasangan dahulu dalam kod HTML."
+                );
+
+                return;
+            }
+
+            const name =
+                document.getElementById("name").value;
+
+            const phone =
+                document.getElementById("phone").value;
+
+            const attendanceValue =
+                document.getElementById("attendance").value;
+
+            const pax =
+                document.getElementById("pax").value;
+
+            const wishes =
+                document.getElementById("wishes").value;
+
+
+            let message =
+                "💍 *RSVP MAJLIS PERKAHWINAN*%0A%0A" +
+
+                "*Daryl Smith & Elicia Natasha*%0A" +
+
+                "📅 4 Jun 2027%0A" +
+
+                "🕡 6:30 Petang%0A%0A" +
+
+                "👤 *Nama:* " + encodeURIComponent(name) + "%0A" +
+
+                "📱 *Telefon:* " + encodeURIComponent(phone) + "%0A" +
+
+                "✅ *Kehadiran:* " + encodeURIComponent(attendanceValue);
+
+
+            if (attendanceValue === "Hadir") {
+
+                message +=
+                    "%0A👥 *Jumlah:* " +
+                    encodeURIComponent(pax) +
+                    " orang";
+
+            }
+
+
+            if (wishes.trim() !== "") {
+
+                message +=
+                    "%0A💌 *Ucapan:* " +
+                    encodeURIComponent(wishes);
+
+            }
+
+
+            const whatsappURL =
+                https://wa.me/qr/CQYS54MKDWFJN1 +
+                whatsappNumber +
+                "?text=" +
+                message;
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        });
+
+</script>
+
+</body>
+</html>
+```
