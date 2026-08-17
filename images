@@ -51,7 +51,7 @@ couple-2.jpeg.jpeg
             <!-- GAMBAR 3 -->
             <div class="overflow-hidden rounded-xl shadow-xl">
                 <img
-                    src="images/couple-3.jpeg"
+couple-3.jpeg.jpeg
                     alt="Daryl & Elicia - Wedding"
                     class="w-full h-[430px] object-cover hover:scale-105 transition duration-700"
                 >
