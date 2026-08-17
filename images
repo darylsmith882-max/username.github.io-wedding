@@ -41,7 +41,7 @@ couple-1.jpeg.jpg
             <!-- GAMBAR 2 -->
             <div class="overflow-hidden rounded-xl shadow-xl md:-translate-y-6">
                 <img
-                    src="images/couple-2.jpeg"
+couple-2.jpeg.jpeg
                     alt="Daryl & Elicia - Couple"
                     class="w-full h-[430px] object-cover hover:scale-105 transition duration-700"
                 >
