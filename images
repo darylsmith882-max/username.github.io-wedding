@@ -31,7 +31,7 @@
             <!-- GAMBAR 1 -->
             <div class="overflow-hidden rounded-xl shadow-xl">
                 <img
-                    src="images/couple-1.jpeg"
+couple-1.jpeg.jpg
                     alt="Daryl & Elicia - Memories"
                     class="w-full h-[430px] object-cover hover:scale-105 transition duration-700"
                 >
